@@ -1,313 +1,123 @@
 /* Estilos */
 
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
-body {
-  background: #f2f2f2;
-}
-
-header {
-  grid-area: header;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  margin: auto 5% auto 5%;
-  background-color: #c2f8e7;
-  animation: 1s ease-out 0s 1 slideInFromLeft;
-}
-
 main {
-  grid-area: main;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 footer {
-  grid-area: footer;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-flow: row nowrap;
+  padding: 20px 0;
+  background-color: #f9ffe7;
+  color: #4b4c4d;
+}
+
+footer ul {
+  padding: 0;
+  list-style: none;
   text-align: center;
   font-size: 18px;
-  background-color: #9ed6f0;
-  color: #000000;
-  margin: 8px;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
 
-nav li {
-  display: inline-block;
+footer ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
 }
 
-h1 {
+footer ul a:hover {
+  opacity: 1;
+}
+
+footer li {
+  padding: 0 10px;
+}
+
+/* Clases */
+
+footer .social {
   text-align: center;
-  font-size: 32px;
-  color: #ffffff;
-  background-color: #386aa3;
-  padding: 8px;
+  padding-bottom: 20px;
 }
 
-footer:hover {
-  animation: changeColor 3s;
+footer .social>a {
+  font-size: 24px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #ffffff;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 75%;
+}
+
+footer .social>a:hover {
+  opacity: 90%;
+}
+
+footer .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}
+
+.product-card {
+  width: 25rem;
+}
+
+.service-card {
+  cursor: pointer;
+}
+
+.service-card:hover {
+  box-shadow: 0 20px 40px #00000033;
+}
+
+.contact-card {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .13em solid blue;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation:
+    typing 4s steps(40, end),
+    blink-caret .75s step-end infinite;
 }
 
 /* Keyframes */
-
-@keyframes changeColor {
-  0%, 100% {
-    background-color: #9ed6f0;
-  }
-  25%, 75% {
-    background-color: #7cc6e9;
-  }
-  50% {
-    background-color: #45b7ec;
-  }
-}
 
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
   }
+  
   100% {
     transform: translateX(0);
   }
 }
 
-/* Clases */
-
-.responsive-img {
-  width: 400px;
-  max-width: 100%;
-  height: auto;
-  flex-basis: 50%;
-  margin: 5px;
-}
-
-
-.index-container {
-  background-color: #dfe988;
-  margin: 10px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 100px 700px 100px;
-  grid-template-areas:
-    "header header header header header"
-    "main main main main main"
-    "footer footer footer footer footer"
-  ;
-}
-
-.banner {
-  text-align: center;
-  margin: 5px;
-}
-
-.index-container>main>.banner {
-  flex-basis: 50%;
-}
-
-.article-text {
-  text-align: center;
-  font-size: 18px;
-  color: #000000;
-  background-color: #ffffff;
-  margin: 5px;
-  flex-basis: 45%;
-}
-
-.CTA {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-  font-size: 25px;
-  color: black;
-  font-weight: 700;
-  text-decoration: none solid #444444;
-  font-variant: small-caps;
-}
-
-.about-container {
-  margin: 5px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 100px 500px 100px;
-  grid-template-areas:
-    "header header"
-    "main main"
-    "footer footer"
-  ;
-}
-
-.project-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 100px 500px 100px;
-  grid-template-areas:
-    "header header"
-    "main main"
-    "footer footer"
-  ;
-  grid-gap: 5px;
-}
-
-.projects-box {
-  display: flex;
-  width: 100%;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  padding: 5px;
-}
-
-.project1, .project2, .project3, .project4 {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-  width: 70%;
-  margin: 10px;
-  text-align: center;
-}
-
-.project1 {
-  grid-area: project1;
-  background-color: #f15050;
-}
-
-.project2 {
-  grid-area: project2;
-  background-color: #0a3d9c;
-}
-
-.project3 {
-  grid-area: project3;
-  background-color: #e86ff3;
-}
-
-.project4 {
-  grid-area: project4;
-  background-color: #92db3e;
-}
-
-.project-container>main, .services-container>main {
-  flex-flow: column nowrap;
-  justify-content: space-evenly;
-  padding: 5px;
-}
-
-.services-container {
-  margin: 20px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100px 400px 100px;
-  grid-gap: 10px;
-  grid-template-areas:
-    "header header header header"
-    "main main main main"
-    "footer footer footer footer"
-  ;
-}
-
-.services-box {
-  display: flex;
-  flex-flow: row nowrap;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-}
-
-.service-QA {
-  grid-area: service-QA;
-}
-
-.service-dev {
-  grid-area: service-dev;
-}
-
-.service-full {
-  grid-area: service-full;
-}
-
-.contact-container {
-  margin: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 100px 800px 100px;
-  grid-gap: 10px;
-  grid-template-areas:
-    "header header"
-    "main main"
-    "footer footer"
-  ;
-}
-
-.presentation-box {
-  flex-basis: 50%;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-}
-
-.presentation-box>.responsive-img {
-  width: 35%;
-  height: fit-content;
-  margin: 15px;
-}
-
-.contact-form {
-  background-color: green;
-  text-align: center;
-  width: 400px;
-  max-width: 100%;
-  height: auto;
-  margin: 10px;
-}
-
-.logo {
-  width: 25%;
-}
-
-.projects-box:hover > div {
-  transform: scale(1.5);
-  transition: all 1.5s linear;
-}
-
-/* Media Queries */
-
-@media only screen and (max-width : 872px) {
-
-  .index-container, .about-container, .services-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 800px 100px;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer"
-    ;
+@keyframes typing {
+  from {
+    width: 0
   }
-
-  .services-box {
-    flex-flow: column wrap;
+  
+  to {
+    width: 100%
   }
+}
 
-  .contact-form {
-    width: 40%;
-    height: auto;
+/* typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent
   }
-
-  main {
-    justify-content: center;
-    align-content: center;
+  
+  50% {
+    border-color: #176fd3;
   }
-
-  .article-text {
-    font-size: 15px;
-  }
-
-  footer {
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-  }
-
 }
