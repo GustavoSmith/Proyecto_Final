@@ -89,13 +89,27 @@ footer .copyright {
     blink-caret .75s step-end infinite;
 }
 
+.navbar-brand:hover {
+  animation: spin 1.25s;
+}
+
 /* Keyframes */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
   }
-  
+
   100% {
     transform: translateX(0);
   }
@@ -105,7 +119,7 @@ footer .copyright {
   from {
     width: 0
   }
-  
+
   to {
     width: 100%
   }
@@ -116,7 +130,7 @@ footer .copyright {
   from, to {
     border-color: transparent
   }
-  
+
   50% {
     border-color: #176fd3;
   }
