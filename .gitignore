@@ -1,0 +1,3 @@
+# Se ignora todo lo creado por Node (la carpeta con los módulos y los json que creo)
+node_modules/
+*.json
