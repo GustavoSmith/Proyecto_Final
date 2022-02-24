@@ -1,66 +1,6 @@
-/* Estilos */
-
 main {
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-footer {
-  padding: 20px 0;
-  background-color: #f9ffe7;
-  color: #4b4c4d;
-}
-
-footer ul {
-  padding: 0;
-  list-style: none;
-  text-align: center;
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-footer ul a {
-  color: inherit;
-  text-decoration: none;
-  opacity: 0.8;
-}
-
-footer ul a:hover {
-  opacity: 1;
-}
-
-footer li {
-  padding: 0 10px;
-}
-
-/* Clases */
-
-footer .social {
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-footer .social>a {
-  font-size: 24px;
-  display: inline-block;
-  text-align: center;
-  border: 1px solid #ffffff;
-  margin: 0 8px;
-  color: inherit;
-  opacity: 75%;
-}
-
-footer .social>a:hover {
-  opacity: 90%;
-}
-
-footer .copyright {
-  margin-top: 15px;
-  text-align: center;
-  font-size: 13px;
-  color: #aaa;
-  margin-bottom: 0;
 }
 
 .product-card {
@@ -70,9 +10,9 @@ footer .copyright {
 .service-card {
   cursor: pointer;
 }
-
 .service-card:hover {
-  box-shadow: 0 20px 40px #00000033;
+  box-shadow: 0 20px 40px black;
+  transform: scale(1.05);
 }
 
 .contact-card {
@@ -81,57 +21,96 @@ footer .copyright {
 
 .typewriter {
   overflow: hidden;
-  border-right: .13em solid blue;
+  border-right: 0.13em solid blue;
   white-space: nowrap;
   margin: 0 auto;
-  animation:
-    typing 4s steps(40, end),
-    blink-caret .75s step-end infinite;
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 .navbar-brand:hover {
   animation: spin 1.25s;
 }
 
-/* Keyframes */
+footer {
+  padding: 20px 0;
+  background-color: #fdfdd7;
+  color: #4b4c4d;
+}
+footer ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+footer ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+footer ul a:hover {
+  opacity: 1;
+}
+footer li {
+  padding: 0 10px;
+}
+footer .social {
+  text-align: center;
+  padding-bottom: 20px;
+}
+footer .social a {
+  font-size: 24px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid white;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 75%;
+}
+footer .social a:hover {
+  opacity: 90%;
+}
+footer .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}
 
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
 }
-
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
   }
-
   100% {
     transform: translateX(0);
   }
 }
-
 @keyframes typing {
   from {
-    width: 0
+    width: 0;
   }
-
   to {
-    width: 100%
+    width: 100%;
   }
 }
-
 /* typewriter cursor effect */
 @keyframes blink-caret {
   from, to {
-    border-color: transparent
+    border-color: transparent;
   }
-
   50% {
     border-color: #176fd3;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
