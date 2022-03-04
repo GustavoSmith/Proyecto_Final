@@ -1,6 +1,5 @@
 main {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0 20px 0;
 }
 
 .product-card {
@@ -75,7 +74,7 @@ footer .copyright {
   margin-top: 15px;
   text-align: center;
   font-size: 13px;
-  color: #aaa;
+  color: grey;
   margin-bottom: 0;
 }
 
