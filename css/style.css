@@ -16,6 +16,7 @@ main {
 
 .contact-card {
   animation: 1s ease-out 0s 1 slideInFromLeft;
+  width: 18rem;
 }
 
 .typewriter {
@@ -30,6 +31,10 @@ main {
   animation: spin 1.25s;
 }
 
+.mb-0, footer .copyright, footer ul {
+  margin-bottom: 0;
+}
+
 footer {
   padding: 20px 0;
   background-color: #fdfdd7;
@@ -41,7 +46,6 @@ footer ul {
   text-align: center;
   font-size: 18px;
   line-height: 1.6;
-  margin-bottom: 0;
 }
 footer ul a {
   color: inherit;
@@ -59,9 +63,9 @@ footer .social {
   padding-bottom: 20px;
 }
 footer .social a {
+  text-align: center;
   font-size: 24px;
   display: inline-block;
-  text-align: center;
   border: 1px solid white;
   margin: 0 8px;
   color: inherit;
@@ -71,11 +75,10 @@ footer .social a:hover {
   opacity: 90%;
 }
 footer .copyright {
-  margin-top: 15px;
   text-align: center;
   font-size: 13px;
+  margin-top: 15px;
   color: grey;
-  margin-bottom: 0;
 }
 
 @keyframes spin {
@@ -110,6 +113,9 @@ footer .copyright {
   50% {
     border-color: #176fd3;
   }
+}
+body {
+  font-family: "Rubik", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,7 @@
 @import "../base/vars";
+@import "../base/maps";
+@import "../base/mixins";
+@import "../base/extends";
 
 footer {
   padding: 20px 0;
@@ -7,10 +10,9 @@ footer {
   ul {
     padding: 0;
     list-style: none;
-    text-align: center;
-    font-size: 18px;
+    @include centered-text(18px);
     line-height: 1.6;
-    margin-bottom: 0;
+    @extend .mb-0;
     a {
       color: inherit;
       text-decoration: none;
@@ -27,10 +29,9 @@ footer {
     text-align: center;
     padding-bottom: 20px;
     a {
-      font-size: 24px;
-      display: inline-block;
-      text-align: center;
-      border: 1px solid white;
+      @include centered-text(24px);
+      display: map-get($map: $estilos-text, $key: display);
+      border: map-get($map: $estilos-text, $key: border-white);
       margin: 0 8px;
       color: inherit;
       opacity: 75%;
@@ -40,10 +41,9 @@ footer {
     }
   }
   .copyright {
+    @include centered-text(13px);
     margin-top: 15px;
-    text-align: center;
-    font-size: 13px;
     color: grey;
-    margin-bottom: 0;
+    @extend .mb-0;
   }
 }
