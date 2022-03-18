@@ -9,8 +9,9 @@ main {
 .service-card {
   cursor: pointer;
   &:hover {
-    box-shadow: 0 20px 40px black;
-    transform: scale(1.05);
+    box-shadow: 0px 10px 15px -7px black, 5px 5px 20px 5px #6665657d;
+    transform: scale(1.03);
+    transition: 0.35s;
   }
 }
 
